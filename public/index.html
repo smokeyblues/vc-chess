@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="VCChess" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VC-Chess</title>
 
-    <!-- Bootstrap -->
+    <!-- Angular Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.js"></script>
+
+  <!-- socket.io -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+
+  <!-- controllers -->
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    <!-- controllers -->
+    <script src="/js/module.vcChess.js"></script>
+    <script src="/js/controllers/controller.home.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +34,9 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body ng-controller="homeController as home">
+
+    <ng-include src="'/html/partials/navbar.html'"></ng-include>
 
     <h1>We have stuff in the browser</h1>
 
@@ -25,5 +44,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="/js/init.js"></script>
   </body>
 </html>

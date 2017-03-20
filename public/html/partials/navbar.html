@@ -1,0 +1,26 @@
+<nav class="white" role="navigation" ng-init="home.sideNav()">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="/" class="brand-logo">Yakkee Template</a>
+    <ul class="right hide-on-med-and-down brand-logo">
+      <li ng-if="!home.Auth.user"><a ng-href="/" ng-click="home.hideNav()">Home</a></li>
+      <li ng-if="home.Auth.user"><a ng-href="/" ng-click="home.hideNav()">Home</a></li>
+      <li ng-if="!home.Auth.user"><a ng-href="/signup">Sign Up</a></li>
+      <li ng-if="!home.Auth.user"><a ng-href="/signin">Sign In</a></li>
+      <li ng-if="home.Auth.user"><a ng-click="home.logout()">Logout</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li ng-if="home.Auth.user"><a ng-href="/" ng-click="home.hideNav()">Home</a></li>
+      <li ng-if="!home.Auth.user"><a ng-href="/" ng-click="home.hideNav()">Home</a></li>
+      <li ng-if="!home.Auth.user"><a ng-href="/signup" ng-click="home.hideNav()">Sign Up</a></li>
+      <li ng-if="!home.Auth.user"><a ng-href="/signin" ng-click="home.hideNav()">Sign In</a></li>
+      <li ng-if="home.Auth.user"><a href="#" ng-click="home.hideNav()"><img class="thumbnail" ng-src="{{home.Auth.user.profileImg}}"></img> My Profile</a></li>
+      <li ng-if="home.Auth.user"><a ng-click="home.logout()">Logout</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!-- <div class="pull-right black-text" ng-if="home.Auth.user" ng-show="nav-mobile">
+      welcome {{home.Auth.user.firstName}}
+    </div> -->
+  </div>
+
+</nav>

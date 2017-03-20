@@ -1,0 +1,211 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+/* import fonts */
+ @import url('https://fonts.googleapis.com/css?family=Sigmar+One');
+
+
+nav ul a,
+nav .brand-logo {
+  font-family: righteous;
+  color: #444;
+}
+
+.hang-up {
+  position: absolute;
+  bottom: 5vh;
+  left: 40vw;
+}
+
+.jitsi {
+  min-height: 90vh;
+  min-width: 100vw;
+}
+
+.thumbnail {
+  border-radius: 25px;
+  max-height: 5vh;
+  max-width: 5vw;
+}
+
+#remoteVideo {
+  width: 100vw;
+  height: 80vh;
+}
+
+#localVideo {
+  width: 30vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotateY(180deg);
+  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+  -moz-transform:rotateY(180deg); /* Firefox */
+}
+
+li {
+  list-style: none;
+}
+
+h3 {
+  font-family: righteous;
+}
+
+.parallax-text {
+  font-family: Oswald;
+  font-size: 5rem;
+}
+
+.profile-img {
+  max-height: 30vh;
+  max-width: 30vw;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.font-size-2 {
+  font-size: 2rem!important;
+}
+
+.font-size-4 {
+  font-size: 4rem!important;
+}
+
+.mic {
+  color: blue;
+}
+
+.mic:hover {
+  color: red;
+}
+
+.card-icon {
+  color: black;
+}
+
+.card-icon:hover {
+  color: blue;
+}
+
+footer .brand-logo {
+  color: white;
+  font-family: righteous;
+  text-align: center;
+  font-size: 3rem;
+}
+
+nav ul a {
+  font-family: 'Railway', sans-serif;
+}
+
+.main-pic {
+  bottom: -50vh;
+}
+
+.outer-glow {
+  text-shadow: 0 0 10px #FFFFFF;
+}
+
+.dark-shadow {
+  text-shadow: 0 0 10px #000000;
+}
+
+.facebook-icon {
+  color: blue;
+  margin-right: 3vw;
+}
+
+.facebook-icon:hover {
+  color: purple;
+}
+
+.twitter-icon {
+  color: fuchsia;
+}
+
+.twitter-icon:hover {
+  color: blue;
+}
+
+.head {
+  font-family: 'Sigmar One', cursive;
+}
+
+.black-text {
+  color: black;
+}
+
+.slug {
+  margin-top: 20vh;
+  font-size: 3rem;
+}
+
+.margin-bottom {
+  margin-bottom: 5vh;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  height: 100vh;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container {
+    height: 100vh;
+  }
+
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+    height: 100vh;
+  }
+}
+
+.main-pic {
+  bottom: -50vh;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
